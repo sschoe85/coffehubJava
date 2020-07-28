@@ -35,3 +35,7 @@
 .quantitySelector > button > svg {
   fill: #fff;
 }
+
+.btnMinus:disabled{
+  color: grey;
+}
