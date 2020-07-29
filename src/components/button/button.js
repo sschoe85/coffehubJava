@@ -13,3 +13,8 @@ export const addButton = (text) =>{
     })
     return element;
 }
+
+export const addMinusButton = () => {
+    const btnMinus = document.createElement('button');
+    button.classList.add("btn")
+}
