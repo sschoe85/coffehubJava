@@ -1,4 +1,4 @@
-import rightArrow from "../../assets/right.svg";
+import rightArrow from "../assets/right.svg";
 
 export const createElement = (tagName, props)=>{
     const element = document.createElement(tagName);
