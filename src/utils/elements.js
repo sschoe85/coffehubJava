@@ -7,22 +7,25 @@ export const createElement = (tagName, props)=>{
     
 }
 
-export const createImage = (imageSrc, altText)=>{
-    const image = createElement("img", {
-        src: imageSrc,
-        alt: altText,
-      });
-      return image;
-}
-
 export const createCoffeelistElement = (listImage, altText, listTag)=>{
-    const coffeeListElement = createImage (listImage, altText);
+    const li = createElement("li");
+    const coffeeListElement = createElement("img", {
+        src: listImage,
+        alt: altText,
+        className: "list-item-icon"
+      });
     const coffeeListTag = createElement ("span", {
         innerText: listTag
     });
-   const rightArrowImage = createImage (rightArrow, "right Arrow");
-   coffeeListElement.append(coffeeListTag);
-   coffeeListElement.append(rightArrowImage);
+   const rightArrowImage = createElement("img", {
+    src: rightArrow,
+    alt: "Right Arrow",
+    className: "list-item-more"
+  });
+   li.append(coffeeListElement);
+   coffeeListElement.after(coffeeListTag);
+   coffeeListTag.after(rightArrowImage);
 
-return coffeeListElement; 
+return li; 
 }
+
